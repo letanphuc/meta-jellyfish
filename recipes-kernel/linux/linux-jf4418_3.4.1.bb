@@ -6,11 +6,12 @@ COMPATIBLE_MACHINE = "(jf4418)"
 
 PV = "3.4.1"
 PR = "r0"
-SRCREV_pn-${PN} = "c9efdea291a03fb607688459a4d3f4cd2a98fb9d"
 
-SRC_URI += "git://github.com/pdtechvn/linux-3.4.x.git"
+SRCREV_pn-${PN} = "${AUTOREV}"
 
-S = "${WORKDIR}/linux-3.4.x"
+SRC_URI += "git://github.com/pdtechvn/linux-3.4.x.git;protocol=https"
+
+S = "${WORKDIR}/git/"
 LDFLAGS = ""
 TARGET_LDFLAGS = ""
 B = "${S}"
